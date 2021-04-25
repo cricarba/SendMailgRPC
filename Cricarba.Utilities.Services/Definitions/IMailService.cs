@@ -8,8 +8,8 @@ namespace Cricarba.Utilities.Services.Definitions
 {
     public interface IMailService
     {
-        MailResult Send(MailConfig mailConfig);
+        MailResult SendMail(MailConfig mailConfig);
 
-        Task<MailResult> SendAsync(MailConfig mailConfig);
+        Task<MailResult> SendMailAsync(MailConfig mailConfig);
     }
 }

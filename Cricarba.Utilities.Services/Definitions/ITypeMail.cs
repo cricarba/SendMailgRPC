@@ -3,9 +3,8 @@ using System.Threading.Tasks;
 
 namespace Cricarba.Utilities.Services.Definitions
 {
-    internal interface ITypeMail
+    internal interface ITypeMail : IMailService
     {
-        MailResult SendMail(MailConfig mailConfig);
-        Task<MailResult> SendMailAsync(MailConfig mailConfig);
+        
     }
 }

@@ -18,7 +18,7 @@ namespace Cricarba.Utilities.Mail.Services
 
         public override async Task<MailResponse> SendMail(MailRequest request, ServerCallContext context)
         {
-            return await _mailService.SendAsync(request);
+            return await _mailService.SendMailAsync(request);
         }
     }
 }

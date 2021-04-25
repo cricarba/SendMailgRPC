@@ -16,19 +16,19 @@ namespace Cricarba.Utilities.Services.Implementations
             if (typeServices != null)
             {
                 Enum.TryParse(typeServices.Value, out MailType mailType);
-                _mailServices = _mailServices = MailFabric.Create(mailType);
+                _mailServices = MailFabric.Create(mailType);
             }
             else
-                _mailServices = _mailServices = MailFabric.Create(MailType.Smtp);
+                _mailServices = MailFabric.Create(MailType.Smtp);
 
         }
 
-        public MailResult Send(MailConfig mailConfig)
+        public MailResult SendMail(MailConfig mailConfig)
         {
             return _mailServices.SendMail(mailConfig);
         }
 
-        public Task<MailResult> SendAsync(MailConfig mailConfig)
+        public Task<MailResult> SendMailAsync(MailConfig mailConfig)
         {
             return _mailServices.SendMailAsync(mailConfig);
         }
