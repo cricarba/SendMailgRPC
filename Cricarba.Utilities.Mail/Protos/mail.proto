@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option csharp_namespace = "Cricarba.Utilities.Mail";
+
+package mail;
+
+service Mail{
+ rpc SendMail(MailRequest) returns(MailResponse);
+}
+message MailRequest{
+  string body =1;
+  string from = 2;
+   string to = 3;
+   string subject = 4;
+   string host = 5;
+   string user = 6;
+   string password = 7;
+}
+
+message MailResponse{
+  string status = 1;
+  string message = 2;
+  bool  error = 3;
+}
+
